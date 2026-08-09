@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anas Amoo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="stylesheet" href="projects.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">AA</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary nav-cta">Get In Touch</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="About-me">
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+      <div class="page-label">My Work</div>
+      <h1>Projects</h1>
+      <p class="page-tagline">Real problems. Real solutions. Real code.</p>
+    </header>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-number">3+</span>
+        <span class="stat-label">Projects Built</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">2</span>
+        <span class="stat-label">Full-Stack Systems</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">5+</span>
+        <span class="stat-label">Technologies Used</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Self-Taught</span>
+      </div>
+    </div>
+
+    <!-- FILTER TABS -->
+    <div class="filter-tabs" role="tablist">
+      <button class="filter-tab active" data-filter="all">All Projects</button>
+      <button class="filter-tab" data-filter="fullstack">Full-Stack</button>
+      <button class="filter-tab" data-filter="frontend">Frontend</button>
+    </div>
+
+    <!-- PROJECT CARDS -->
+    <section class="projects-grid" id="projectsGrid">
+
+      <!-- MediCore HMS -->
+      <article class="project-card featured" data-category="fullstack">
+        <div class="project-card-image">
+          <img src="medi.jpg" alt="MediCore Hospital Management System screenshot" />
+          <div class="project-card-badge">Featured</div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-meta">
+            <span class="project-type">Full-Stack &middot; Node.js &middot; MySQL</span>
+          </div>
+          <h2 class="project-title">MediCore — Hospital Management System</h2>
+          <p class="project-desc">
+            A complete hospital management platform built with Node.js, Express, and MySQL.
+            Includes JWT authentication, role-based access control for Admins, Doctors, and
+            Nurses, a patient records system, appointment scheduling, medical history tracking,
+            and a full audit log for every action taken.
+          </p>
+          <div class="project-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">🔐</span>
+              <span>JWT Auth &amp; Role-Based Access</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🗄️</span>
+              <span>MySQL Database with full schema</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">📋</span>
+              <span>Patient Records &amp; Appointments</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">📝</span>
+              <span>Audit Log on every action</span>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">Node.js</span>
+            <span class="badge">Express</span>
+            <span class="badge">MySQL</span>
+            <span class="badge">JWT</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="btn btn-primary">Live Demo</a>
+            <a href="https://github.com/buildwithanas" target="_blank" class="btn btn-outline">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Little Scholar -->
+      <article class="project-card featured" data-category="fullstack">
+        <div class="project-card-image">
+          <img src="school.jpg" alt="Little Scholar School Portal screenshot" />
+          <div class="project-card-badge">Featured</div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-meta">
+            <span class="project-type">Full-Stack &middot; PHP &middot; MySQL</span>
+          </div>
+          <h2 class="project-title">Little Scholar — School Portal</h2>
+          <p class="project-desc">
+            An Islamic school website with a dynamic PHP/MySQL student result checker. Features
+            the Nigerian grading scale (A1–F9), automatic class position calculation across
+            all students, prepared SQL statements for security, and a smooth frontend built
+            with vanilla JavaScript using the Fetch API.
+          </p>
+          <div class="project-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">📊</span>
+              <span>Nigerian A1–F9 Grading Scale</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🏆</span>
+              <span>Auto Class Position Ranking</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🛡️</span>
+              <span>Prepared Statements (SQL Injection Safe)</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">⚡</span>
+              <span>Fetch API Dynamic Frontend</span>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">PHP</span>
+            <span class="badge">MySQL</span>
+            <span class="badge">XAMPP</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="btn btn-primary">Live Demo</a>
+            <a href="https://github.com/buildwithanas" target="_blank" class="btn btn-outline">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Portfolio -->
+      <article class="project-card" data-category="frontend">
+        <div class="project-card-image">
+          <img src="per.jpg" alt="Personal Portfolio Website screenshot" />
+        </div>
+        <div class="project-card-body">
+          <div class="project-meta">
+            <span class="project-type">Frontend &middot; HTML &middot; CSS &middot; JS</span>
+          </div>
+          <h2 class="project-title">Personal Portfolio Website</h2>
+          <p class="project-desc">
+            A multi-page responsive portfolio — the very site you're browsing right now.
+            Built with vanilla HTML, CSS, and JavaScript, featuring a consistent navy &amp; amber
+            design system, mobile navigation, and dedicated pages for About, Skills, Projects,
+            and Contact.
+          </p>
+          <div class="project-tags">
+            <span class="badge">HTML5</span>
+            <span class="badge">CSS3</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">Responsive Design</span>
+            <span class="badge">Google Fonts</span>
+          </div>
+          <div class="project-actions">
+            <a href="index.html" class="btn btn-primary">You're Here</a>
+            <a href="https://github.com/buildwithanas" target="_blank" class="btn btn-outline">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- CURRENTLY BUILDING -->
+    <div class="currently-section">
+      <h3>Currently Building</h3>
+      <ul class="currently-list">
+        <li>Expanding MediCore with a doctor's scheduling dashboard</li>
+        <li>Exploring React to rebuild the portfolio as a single-page app</li>
+        <li>Learning REST API design patterns with Express &amp; Postman</li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <section class="projects-cta">
+      <div class="cta-text">
+        <h2>Have a project in mind?</h2>
+        <p>I'm open to freelance work, internships, and collaboration. Let's build something useful together.</p>
+      </div>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+        <a href="https://github.com/buildwithanas" target="_blank" class="btn btn-outline">See All on GitHub</a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="nav-logo-text">AA</span>
+        <p>Building clean and responsive web experiences.</p>
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/anas-amoo-0173523a8" target="_blank">💼 LinkedIn</a>
+        <a href="https://github.com/buildwithanas" target="_blank">🐱 GitHub</a>
+        <a href="https://twitter.com/Amoo_Anas1" target="_blank">🐦 Twitter / X</a>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <p>&copy; 2026 Amoo Anas — All rights reserved</p>
+      <a href="#" class="back-to-top">↑ Back to top</a>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+    // Filter tabs
+    const tabs  = document.querySelectorAll('.filter-tab');
+    const cards = document.querySelectorAll('.project-card');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.dataset.filter;
+        cards.forEach(card => {
+          const match = filter === 'all' || card.dataset.category === filter;
+          card.style.display = match ? 'grid' : 'none';
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
