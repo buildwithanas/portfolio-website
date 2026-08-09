@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="styles/contact.css"/>
+
+</head>
+<body> 
+
+     <!-- Nav -->
+  <div class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact Me</a></li>
+    </ul>
+  </div>
+
+  <div class="contact-page">
+
+    <!-- Header -->
+    <div class="contact-header">
+      <h1>Get In <span>Touch</span></h1>
+      <p>Have a project in mind? Want to collaborate? Or just want to say hi? I'd love to hear from you.</p>
+    </div>
+
+    <!-- Availability badge -->
+    <div style="text-align:center">
+      <div class="availability">
+        <span class="avail-dot"></span>
+        Available for freelance, internships & full-time roles
+      </div>
+    </div>
+
+    <!-- Two-column layout -->
+    <div class="contact-layout">
+
+      <!-- Left col: info + socials -->
+      <div class="contact-info-col">
+        <h2>Contact Info</h2>
+        <p>Prefer direct contact? Here are all the ways to reach me.</p>
+
+        <a class="info-card" href="mailto:anasamoo0704@gmail.com">
+          <div class="info-icon">📧</div>
+          <div class="info-card-text">
+            <div class="label">Email</div>
+            <div class="value">anasamoo0704@gmail.com</div>
+          </div>
+        </a>
+
+        <a class="info-card" href="tel:07043420968">
+          <div class="info-icon">📞</div>
+          <div class="info-card-text">
+            <div class="label">Phone</div>
+            <div class="value">07043420968 / 08087315891</div>
+          </div>
+        </a>
+
+        <div class="info-card" style="cursor:default">
+          <div class="info-icon">📍</div>
+          <div class="info-card-text">
+            <div class="label">Location</div>
+            <div class="value">Ogere Remo, Ogun State, Nigeria</div>
+          </div>
+        </div>
+
+        <!-- Socials -->
+        <div class="socials-title">Find me online</div>
+        <div class="socials-grid">
+          <a class="social-link" href="https://www.linkedin.com/in/anas-amoo-0173523a8" target="_blank">
+            <span class="s-icon">💼</span> LinkedIn
+          </a>
+          <a class="social-link" href="https://github.com/buildwithanas" target="_blank">
+            <span class="s-icon">🐱</span> GitHub
+          </a>
+          <a class="social-link" href="https://www.instagram.com/anas_devs" target="_blank">
+            <span class="s-icon">📸</span> Instagram
+          </a>
+          <a class="social-link" href="https://twitter.com/Amoo_Anas1" target="_blank">
+            <span class="s-icon">🐦</span> Twitter / X
+          </a>
+          <a class="social-link" href="https://www.tiktok.com/@anas.devs" target="_blank">
+            <span class="s-icon">🎵</span> TikTok
+          </a>
+        </div>
+      </div>
+
+      <!-- Right col: form -->
+      <div class="contact-form-col">
+        <h2>Send a Message</h2>
+        <p>Fill in the form and I'll get back to you within 24 hours.</p>
+
+        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="e.g. John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="" disabled selected>What's this about?</option>
+              <option value="freelance">Freelance Project</option>
+              <option value="internship">Internship Opportunity</option>
+              <option value="fulltime">Full-time Role</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="other">Just Saying Hi</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project or what's on your mind..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Send Message →</button>
+          <p class="form-note">I typically respond within 24 hours ⚡</p>
+
+          <div class="success-msg" id="successMsg">
+            ✅ Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2026 Anas Amoo. All rights reserved.</p>
+  </div>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('successMsg');
+
+    form.addEventListener('submit', function(e) {
+      // If you're using Formspree, remove this block and let it submit normally.
+      // This is just for demo — shows success message without a real backend.
+      const action = form.getAttribute('action');
+      if (action.includes('YOUR_FORM_ID')) {
+        e.preventDefault();
+        successMsg.style.display = 'block';
+        form.reset();
+        setTimeout(() => successMsg.style.display = 'none', 5000);
+      }
+    });
+  </script>
+
+</body>
+</html>
+

@@ -1,0 +1,454 @@
+/* ─────────────────────────────────────────
+   PROJECTS.CSS
+   Layers on top of style.css
+   Palette: #0f0f0f bg | #00ffcc accent | #1a1a1a surface | #ffffff text
+───────────────────────────────────────── */
+
+/* ── Fonts ── */
+body {
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+}
+
+/* ── Nav override (full-width sticky bar) ── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15, 15, 15, 0.93);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 66px;
+}
+
+/* Override the ul-only nav style from style.css */
+.nav ul {
+  all: unset;
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-logo {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1.4rem;
+  color: #00ffcc;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0;
+  height: 2px;
+  background: #00ffcc;
+  border-radius: 2px;
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after { width: 100%; }
+.nav-links a.active { color: #00ffcc; }
+
+.nav-cta {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ── Page Header ── */
+.page-header {
+  text-align: center;
+  padding: 60px 0 40px;
+}
+
+.page-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #00ffcc;
+  margin-bottom: 12px;
+}
+
+/* h1 already styled in style.css */
+
+/* ── Filter Tabs ── */
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  padding: 8px 22px;
+  border-radius: 50px;
+  border: 1px solid #2a2a2a;
+  background: transparent;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.filter-tab:hover {
+  border-color: #00ffcc;
+  color: #00ffcc;
+}
+
+.filter-tab.active {
+  background: #00ffcc;
+  border-color: #00ffcc;
+  color: #0f0f0f;
+  font-weight: 700;
+}
+
+/* ── Project Cards Grid ── */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+/* Each card: side-by-side image + body */
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: #00ffcc;
+  transform: translateY(-4px);
+}
+
+/* Featured cards get a left accent stripe */
+.project-card.featured {
+  border-left: 3px solid #00ffcc;
+}
+
+/* Image side */
+.project-card-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #111;
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-card-image img {
+  transform: scale(1.05);
+}
+
+.project-card-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #00ffcc;
+  color: #0f0f0f;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+
+/* Body side */
+.project-card-body {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-type {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #00ffcc;
+  text-transform: uppercase;
+}
+
+.project-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+  line-height: 1.25;
+  font-weight: 400;
+  margin: 0;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: #aaaaaa;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Highlights list (featured projects) */
+.project-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 16px;
+  background: rgba(0, 255, 204, 0.04);
+  border: 1px solid rgba(0, 255, 204, 0.12);
+  border-radius: 10px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #cccccc;
+  line-height: 1.4;
+}
+
+.highlight-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Tags */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+/* Actions */
+.project-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ── Currently Building ── */
+/* already styled in style.css — just fine-tune font sizes */
+.currently-section {
+  margin-bottom: 60px;
+}
+
+.currently-list li {
+  font-size: 1rem;
+}
+
+/* ── Projects CTA ── */
+.projects-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  padding: 40px 44px;
+  margin-bottom: 60px;
+}
+
+.cta-text h2 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1.9rem;
+  color: #ffffff;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.cta-text p {
+  font-size: 0.97rem;
+  color: #aaaaaa;
+  margin: 0;
+  max-width: 420px;
+}
+
+/* ── Footer ── */
+.footer {
+  background: #111111;
+  border-top: 1px solid #1e1e1e;
+  padding: 56px 24px 28px;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+.nav-logo-text {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1.4rem;
+  color: #00ffcc;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 0.875rem;
+  color: #888;
+  max-width: 220px;
+  line-height: 1.6;
+}
+
+.footer-nav,
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-nav a,
+.footer-socials a {
+  color: #888;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover,
+.footer-socials a:hover { color: #00ffcc; }
+
+.footer-bottom-bar {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #1e1e1e;
+  padding-top: 24px;
+}
+
+.footer-bottom-bar p {
+  font-size: 0.82rem;
+  color: #555;
+}
+
+.back-to-top {
+  color: #00ffcc;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.back-to-top:hover { opacity: 0.7; }
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-image {
+    aspect-ratio: 16 / 8;
+  }
+
+  .project-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 28px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 66px;
+    left: 0; right: 0;
+    background: #111;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    border-bottom: 1px solid #1e1e1e;
+    padding: 12px 0;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .nav-links li { width: 100%; text-align: center; }
+  .nav-links a { display: block; padding: 12px 0; }
+
+  .nav-cta { display: none; }
+  .nav-hamburger { display: block; }
+
+  .project-card-body { padding: 24px 20px; }
+
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
