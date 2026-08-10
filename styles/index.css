@@ -222,7 +222,7 @@ nav ul a:focus-visible::after {
 }
 .hero-inner {
   display: grid;
-  grid-template-columns: (repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: (repeat(auto-fit, minmax(300px, 1fr)));
 }
 .hero-inner .img-badge {
   height: 10%;
@@ -295,7 +295,10 @@ nav ul a:focus-visible::after {
   gap: 20px;
   margin-bottom: 25px;
 }
-
+.accent{
+  color: #00ffcc;
+  font-weight: 700;
+}
 .skills-snippet h2 {
   color: #ffffff;
   font-size: 1.75rem;
