@@ -229,8 +229,12 @@ nav ul a:focus-visible::after {
 }
 
 .hero-content{
-  color: #00ffcc;
+  color: #ffffff;
   font-size: 1.1rem;
+  font-weight: 400;
+}
+.hero-content .accent {
+  color: #00ffcc;
   font-weight: 400;
 }
 .hero p {
