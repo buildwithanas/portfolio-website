@@ -347,3 +347,7 @@
       .nav ul { gap: 18px; font-size: 0.9rem; }
     }
 
+    .hero-inner {
+      display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }

@@ -3,36 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Amoo Anas</title>
+  <title>Anas Amoo</title>
   <link rel="stylesheet" href="styles/index.css"/>
+  <link rel="icon" type="images/jpeg" href="images/anas.jpeg">
+
 </head>
 <body>
 
     <div class="home">
 
   <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-logo">AA</div>
-    <ul class="nav-links">
+  <nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">
+        <img src="images/anas.jpeg" alt="Anas Amoo Logo">
+      </div>
+      <div class="nav-logo-text"><strong>BUILDWITHANAS</strong></div>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul id="navMenu">
       <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact Me</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="contacts.html" class="active">Contact</a></li>
     </ul>
-    <a href="contact.html" class="nav-cta">Get In Touch</a>
-  </nav>
+  </div>
+</nav>
+
 
     <!-- HERO -->
   <section class="hero">
   <div class="hero-inner">
-    <div class="hero-badge"><h1>Frontend Developer & <br> Aspiring Software Engineer</h1></div>
+    <div class="hero-badge"><h3>Website Developer | Software Developer</h3></div>
+    <div class="img-badge"><img src="images/img.jpeg" alt="Anas Amoo"/></div>
 
     <div class="hero-content">
-      <h1>
+      <h4>
         Hi, I'm <span class="accent">Anas</span>.<br>
         I build responsive websites and interactive web experiences.
-      </h1>
+      </h4>
     </div>
 
     <p class="hero-desc">
@@ -151,6 +167,45 @@
     </a>
   </div>
 </footer>
+
+
+<script>
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('open');
+    navToggle.classList.toggle('open', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Scroll reveal
+  document.addEventListener('DOMContentLoaded', () => {
+    const revealEls = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      revealEls.forEach(el => el.classList.add('reveal-active'));
+      return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => observer.observe(el));
+  });
+</script>
 </body>
 </html>
 
