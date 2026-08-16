@@ -184,8 +184,8 @@ nav ul a:focus-visible::after {
     border-top: 1px solid rgba(0, 252, 218, 0.08);
   }
   .nav-logo-icon img {
-  width: 96%;
-  height: 80%;
+  width: 16%;
+  height: 20%;
   object-fit: cover;
   transform: scale(1.5);
   }
