@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BuildWithAnas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="images/jpeg" href="images/amoo.jpeg">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">
+        <img src="images/amoo.jpeg" alt="Dextra Interiors logo">
+      </div>
+      <div class="nav-logo-text"><strong>BuildWithAnas</strong></div>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul id="navMenu">
+      <li><a href="#index.html" class="active">Home</a></li>
+      <li><a href="#about.html" class="active">About Me</a></li>
+      <li><a href="#projects.html" class="active">Projects</a></li>
+      <li><a href="#contact.html" class="active">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- About section -->
+<div class="about">
+  <img src="images/img.jpeg" alt="Anas Amoo">
+
+  <div class="about-content">
+    <h2>Hi, I'm Anas Amoo</h2>
+
+    <p>I'm Software Engineer and Web Developer, passionate about building modern, responsive, and user-friendly applications that solve real problems.</p>
+
+    <p>With hands-on experience in HTML, CSS, JavaScript, Node.js, Express, MySQL, and MongoDB, I build clean full-stack solutions from hospital management systems to school portals. I write code that works, not just code that looks good.</p>
+
+    <p>I'm particularly motivated by <strong>Tech for Good</strong>. I believe technology can tackle major challenges food insecurity, public health, education especially across Africa and developing regions. Every project I build is a step toward that vision.</p>
+
+    <p>Currently open to <strong>freelance work, internships, and full-time roles</strong> where I can contribute meaningfully and keep growing.</p>
+
+    <div class="cta-buttons">
+      <a href="projects.html" class="btn btn-primary">View My Projects</a>
+      <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('open');
+    navToggle.classList.toggle('open', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Scroll reveal
+  document.addEventListener('DOMContentLoaded', () => {
+    const revealEls = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      revealEls.forEach(el => el.classList.add('reveal-active'));
+      return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => observer.observe(el));
+  });
+</script>
+</body>
+</html>
