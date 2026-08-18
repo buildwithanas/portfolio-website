@@ -141,12 +141,6 @@
       color: #ffffff;
     }
 
-@media {
-  .about-img{
-    width: 500px;
-    height: 5000px;
-  }
-}
 
     /* ── CTA buttons ── */
     .cta-buttons {
