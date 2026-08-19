@@ -454,11 +454,11 @@ nav ul a:focus-visible::after {
 
 .stack-category {
   margin-bottom: 24px;
-  margin-left: 90px;
+  margin-left: 70px;
 }
 
 .stack-category-label {
-  font-size: 1.0rem;
+  font-size: 1.3rem;
   font-weight: 650;
   color: #00ffcc;
   letter-spacing: 0.1em;
@@ -476,7 +476,7 @@ nav ul a:focus-visible::after {
 .badge {
   padding: 5px 10px;
   border-radius: 10px;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   font-weight: 500;
   border: 1px solid #2a2a2a;
   background: #0a0a0a;
@@ -501,4 +501,104 @@ nav ul a:focus-visible::after {
 .badge {
   padding: 3px 6px;
   font-size: 0.75rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ── Currently section ── */
+.currently-section {
+  background: #0a0a0a;
+  border: 1px solid #2a2a2a;
+  border-left: 3px solid #00ffcc;
+  border-radius: 12px;
+  padding: 20px 26px;
+  margin-bottom: 50px;
+  max-width: 1100px;
+  margin-left: 90px;
+}
+
+.currently-section h3 {
+  color: #00ffcc;
+  font-size: 1.0rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.currently-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.currently-list li {
+  font-size: 0.95rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.currently-list li::before {
+  content: '→';
+  color: #00ffcc;
+  flex-shrink: 0;
+}
+
+/* ── Footer ── */
+.about-footer, .footer {
+  text-align: center;
+  padding: 35px 20px;
+  color: #ffffff;
+  font-size: 0.85rem;
+}
+
+.about-footer {
+  background: #0a0a0a;
+  margin-top: 50px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about img {
+    width: 260px;
+    height: 320px;
+    margin-bottom: 10px;
+  }
+
+  h1 { font-size: 2.2rem; }
+
+  .stat-item { min-width: 120px; }
+
+  .cta-buttons { justify-content: center; }
+
+  .nav ul { gap: 18px; font-size: 0.9rem; }
+}
+
+.hero-inner {
+  display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
