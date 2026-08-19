@@ -168,7 +168,7 @@ nav ul a:focus-visible::after {
   margin-top: 30px;
   display: flex;
   align-items: flex-start;
-  gap: 60px;
+  gap: 80px;
   flex-wrap: wrap;
   margin-bottom: 20px;
   max-width: 1200px;
@@ -176,14 +176,14 @@ nav ul a:focus-visible::after {
 }
 
 .about img {
-  width: 450px;
-  height: 500px;
+  width: 350px;
+  height: 400px;
   object-fit: cover;
   border-radius: 10px;
   border: 2px solid #00ffcc;
   box-shadow: 0 15px 35px rgba(0, 255, 204, 0.15);
   flex-shrink: 0;
-  margin-left: 100px;
+  margin-left: 200px;
 }
 
 .about-content {
@@ -193,15 +193,24 @@ nav ul a:focus-visible::after {
 }
 
 .about h2 {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  font-size: 1.65rem;
+  margin-bottom: 7px;
+  color: #00ffcc;
+}
+
+.about h3 {
+  font-size: 1.55rem;
+  margin-bottom: 7px;
   color: #00ffcc;
 }
 
 .about p {
-  font-size: 0.85rem;
+  font-size: 1rem;
+  font-weight: 200;
   margin-bottom: 18px;
   color: #ffffff;
+  line-height: 40px;
 }
 
 /* ── CTA buttons ── */
@@ -252,11 +261,17 @@ nav ul a:focus-visible::after {
     width: 350px;
     height: 320px;
     margin-left: 20px;
+    margin-bottom: 10px;
   }
   .about-content {
     max-width: 360px;
   }
-  .about h2 {
+  .about h2{
+    margin-top: -60px;
+    font-size: 1.05rem;
+    margin-left: 30px;
+  }
+  .about h3{
     font-size: 1.05rem;
     margin-left: 30px;
   }
@@ -327,5 +342,27 @@ nav ul a:focus-visible::after {
   }
   .stat-label {
     font-size: 0.75rem;
+  }
+}
+
+.about-me h2{
+  color: #00ffcc;
+  text-align: center;
+}
+.about-me p {
+  font-size: 0.95rem;
+  text-align: justify;
+  max-width: 1200px;
+  padding-left: 90px;
+}
+@media (max-width: 768px) {
+  .about-me {
+    max-width: 500px;
+  }
+  .about-me h2 {
+    margin-left: -80px;
+  }
+  .about-me p {
+    margin-left: -60px;
   }
 }
