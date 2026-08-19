@@ -475,7 +475,7 @@ nav ul a:focus-visible::after {
 
 .badge {
   padding: 5px 10px;
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: 0.95rem;
   font-weight: 500;
   border: 1px solid #2a2a2a;
@@ -497,4 +497,8 @@ nav ul a:focus-visible::after {
 }
 .badges {
   margin-left: 20px;
+}
+.badge {
+  padding: 3px 6px;
+  font-size: 0.75rem;
 }
