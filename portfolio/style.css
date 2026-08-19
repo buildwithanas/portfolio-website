@@ -371,23 +371,27 @@ nav ul a:focus-visible::after {
 
 /* ── What I do cards ── */
 .section-title {
-  font-size: 3rem;
+  font-size: 1.45rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #00ffcc;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .section-subtitle {
   color: #ffffff;
-  font-size: 0.97rem;
-  margin-bottom: 30px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  margin-left: 90px;
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  gap: -18px;
   margin-bottom: 70px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .service-card {
@@ -395,6 +399,7 @@ nav ul a:focus-visible::after {
   border: 1px solid #2a2a2a;
   border-radius: 14px;
   padding: 20px 12px;
+  width: 250px;
   transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -416,4 +421,12 @@ nav ul a:focus-visible::after {
   font-size: 0.85rem;
   color: #ffffff;
   line-height: 1.65;
+}
+@media (max-width: 768px) {
+  .section-title{
+
+  }
+  .section-subtitle{
+    margin-left: 20px;
+  }
 }
