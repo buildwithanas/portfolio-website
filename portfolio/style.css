@@ -390,13 +390,13 @@ nav ul a:focus-visible::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: -18px;
-  margin-bottom: 70px;
+  margin-bottom: 25px;
   padding-left: 80px;
   padding-right: 80px;
 }
 
 .service-card {
-  background: #1a1a1a;
+  background: #0a0a0a;
   border: 1px solid #2a2a2a;
   border-radius: 14px;
   padding: 20px 12px;
@@ -408,8 +408,6 @@ nav ul a:focus-visible::after {
   border-color: #00ffcc;
   transform: translateY(-4px);
 }
-
-
 
 .service-card h3 {
   font-size: 1.25rem;
@@ -429,5 +427,62 @@ nav ul a:focus-visible::after {
   }
   .section-subtitle{
     margin-left: 20px;
+    font-size: 0.95rem;
   }
+  .services-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+  .service-card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  padding: 20px 12px;
+  width: 170px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+}
+
+/* ── Tech stack ── */
+.stack-section {
+  margin-bottom: 40px;
+}
+
+.stack-category {
+  margin-bottom: 24px;
+}
+
+.stack-category-label {
+  font-size: 1.0rem;
+  font-weight: 600;
+  color: #00ffcc;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: 1px solid #2a2a2a;
+  background: #1a1a1a;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.badge:hover {
+  border-color: #00ffcc;
+  color: #00ffcc;
 }
