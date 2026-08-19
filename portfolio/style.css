@@ -458,26 +458,28 @@ nav ul a:focus-visible::after {
 
 .stack-category-label {
   font-size: 1.0rem;
-  font-weight: 600;
+  font-weight: 650;
   color: #00ffcc;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  margin-left: 90px;
 }
 
 .badges {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-left: 90px;
 }
 
 .badge {
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.95rem;
   font-weight: 500;
   border: 1px solid #2a2a2a;
-  background: #1a1a1a;
+  background: #0a0a0a;
   color: #ffffff;
   transition: all 0.2s ease;
 }
@@ -485,4 +487,14 @@ nav ul a:focus-visible::after {
 .badge:hover {
   border-color: #00ffcc;
   color: #00ffcc;
+}
+@media (max-width: 768px) {
+
+}
+.stack-category-label {
+  font-size: 0.79rem;
+  margin-left: 20px;
+}
+.badges {
+  margin-left: 20px;
 }
