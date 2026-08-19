@@ -3,234 +3,231 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BuildWithAnas</title>
+  <title>Anas Amoo — Software Engineer &amp; Web Developer</title>
+  <meta name="description" content="Anas Amoo is a self-taught full-stack developer building practical, real-world web applications with Node.js, Express, MySQL and JavaScript.">
+  <meta name="theme-color" content="#0B1220">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Anas Amoo — Software Engineer & Web Developer">
+  <meta property="og:description" content="Full-stack developer building practical web applications. Open to freelance work, internships and full-time roles.">
+  <meta property="og:type" content="website">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="images/jpeg" href="images/amoo.jpeg">
+  <link rel="icon" type="image/jpeg" href="images/amoo.jpeg">
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon">
-        <img src="images/amoo.jpeg" alt="Dextra Interiors logo">
+  <!-- Skip link for keyboard / screen-reader users -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <nav aria-label="Primary">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-icon">
+            <img src="images/amoo.jpeg" alt="" width="40" height="40">
+          </span>
+          <span class="nav-logo-text">Anas Amoo</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul id="navMenu">
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
-      <div class="nav-logo-text"><strong>BuildWithAnas</strong></div>
-    </a>
+    </nav>
+  </header>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+  <main id="main">
 
-    <ul id="navMenu">
-      <li><a href="#index.html" class="active">Home</a></li>
-      <li><a href="#about.html" class="active">About Me</a></li>
-      <li><a href="#projects.html" class="active">Projects</a></li>
-      <li><a href="#contact.html" class="active">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Lagos, Nigeria · Open to work</p>
+          <h1>Anas Amoo</h1>
+          <p class="hero-role">Software Engineer &amp; Web Developer</p>
 
+          <div class="terminal" role="img" aria-label="Terminal output reading: whoami — full-stack developer turning real problems into working software.">
+            <div class="terminal-bar">
+              <span class="dot dot-r" aria-hidden="true"></span>
+              <span class="dot dot-y" aria-hidden="true"></span>
+              <span class="dot dot-g" aria-hidden="true"></span>
+              <span class="terminal-title">anas@lagos:~</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> whoami</p>
+              <p class="terminal-out">full-stack developer — turning real problems into working software.</p>
+              <p><span class="prompt">$</span> status<span class="cursor" aria-hidden="true"></span></p>
+              <p class="terminal-out">available for freelance work, internships &amp; entry-level roles</p>
+            </div>
+          </div>
 
-<!-- About section -->
-<div class="about">
-  <img src="images/img.jpeg" alt="Anas Amoo">
+          <div class="cta-buttons">
+            <a href="projects.html" class="btn btn-primary">View my projects</a>
+            <a href="contact.html" class="btn btn-outline">Get in touch</a>
+          </div>
+        </div>
 
-  <div class="about-content">
-    <h2>Hi, I'm Anas Amoo.</h2>
-    <h3>Software Engineer & Web Developer.</h3>
+        <div class="hero-media">
+          <img src="images/img.jpeg" alt="Portrait of Anas Amoo" width="360" height="420" loading="eager">
+        </div>
+      </div>
+    </section>
 
-    <p>I build responsive, user-friendly web application and turn real-world problems into practical software solutions.</p>
+    <!-- ============ STATS ============ -->
+    <section class="stats-bar" aria-label="Quick facts">
+      <div class="stat-item">
+        <span class="stat-number">2+</span>
+        <span class="stat-label">Years learning</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">7+</span>
+        <span class="stat-label">Projects built</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Tech stacks</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">Open</span>
+        <span class="stat-label">to opportunities</span>
+      </div>
+    </section>
 
-    
+    <!-- ============ ABOUT ============ -->
+    <section class="about-me reveal" aria-labelledby="about-heading">
+      <h2 id="about-heading">About me</h2>
+      <p>I'm Anas Amoo, a software engineer and web developer building modern, responsive, and user-friendly applications that solve real problems.</p>
+      <p>I work primarily with HTML, CSS, JavaScript, Node.js, Express and MySQL, alongside Python, PHP and C. I focus on writing clean, maintainable code — code that works, not just code that looks good.</p>
+      <p>I'm especially drawn to <strong>tech for good</strong>: the role technology can play in healthcare, education, food security and public services, particularly across Africa. Every project I build is a chance to learn, solve something real, and ship it.</p>
+      <p>I'm continuously sharpening my engineering skills and looking for freelance work, internships and full-time roles where I can learn, contribute and grow.</p>
+    </section>
 
-    <div class="cta-buttons">
-      <a href="projects.html" class="btn btn-primary">View My Projects</a>
-      <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+    <!-- ============ WHAT I DO ============ -->
+    <section class="services reveal" aria-labelledby="services-heading">
+      <div class="section-head">
+        <h2 id="services-heading">What I do</h2>
+        <p class="section-subtitle">Areas I focus on and can help you with</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <h3>Frontend development</h3>
+          <p>Responsive, accessible interfaces built with clean HTML, CSS and JavaScript — pixel-considered layouts that hold up on any screen.</p>
+        </article>
+        <article class="service-card">
+          <h3>Backend development</h3>
+          <p>REST APIs with Node.js/Express and PHP. Secure authentication, role-based access, and database design with MySQL.</p>
+        </article>
+        <article class="service-card">
+          <h3>Full-stack projects</h3>
+          <p>End-to-end systems, from database schema to live UI — including hospital management systems and school portals.</p>
+        </article>
+        <article class="service-card">
+          <h3>Tech for good</h3>
+          <p>Applying software to real community problems, with a focus on health, education and social impact platforms in Africa.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ TECH STACK ============ -->
+    <section class="stack-section reveal" aria-labelledby="stack-heading">
+      <div class="section-head">
+        <h2 id="stack-heading">Tech stack</h2>
+        <p class="section-subtitle">Tools and technologies I work with</p>
+      </div>
+
+      <div class="stack-category">
+        <h3 class="stack-category-label">Frontend</h3>
+        <ul class="badges">
+          <li class="badge">HTML5</li>
+          <li class="badge">CSS3</li>
+          <li class="badge">JavaScript</li>
+          <li class="badge">Responsive design</li>
+        </ul>
+      </div>
+
+      <div class="stack-category">
+        <h3 class="stack-category-label">Backend</h3>
+        <ul class="badges">
+          <li class="badge">Node.js</li>
+          <li class="badge">Express.js</li>
+          <li class="badge">PHP</li>
+          <li class="badge">Python</li>
+          <li class="badge">REST APIs</li>
+          <li class="badge">JWT auth</li>
+        </ul>
+      </div>
+
+      <div class="stack-category">
+        <h3 class="stack-category-label">Databases</h3>
+        <ul class="badges">
+          <li class="badge">MySQL</li>
+          <li class="badge">MySQL2</li>
+        </ul>
+      </div>
+
+      <div class="stack-category">
+        <h3 class="stack-category-label">Tools</h3>
+        <ul class="badges">
+          <li class="badge">Git &amp; GitHub</li>
+          <li class="badge">VS Code</li>
+          <li class="badge">Linux / Ubuntu</li>
+          <li class="badge">XAMPP</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CURRENTLY ============ -->
+    <section class="currently-section reveal" aria-labelledby="currently-heading">
+      <h2 id="currently-heading">Currently</h2>
+      <ul class="currently-list">
+        <li>Building full-stack platforms with Node.js, Express and MySQL</li>
+        <li>Deepening my knowledge of React and backend architecture</li>
+        <li>Open to freelance projects, internships and full-time roles</li>
+        <li>Learning deployment — shipping to Render and Vercel</li>
+        <li>On a mission to become a well-rounded full-stack developer</li>
+      </ul>
+    </section>
+
+    <!-- ============ CONTACT CTA ============ -->
+    <section class="cta-band reveal" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">Let's build something</h2>
+      <p>Have a project in mind, or hiring for a role? I'd like to hear about it.</p>
+      <a href="contact.html" class="btn btn-primary">Start a conversation</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-tagline">Software Engineer · Web Developer</p>
+
+      <ul class="socials-grid" aria-label="Social links">
+        <li><a class="social-link" href="https://www.linkedin.com/in/anas-amoo-0173523a8" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a class="social-link" href="https://github.com/buildwithanas" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a class="social-link" href="https://www.instagram.com/anas_devs" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a class="social-link" href="https://twitter.com/Amoo_Anas1" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
+        <li><a class="social-link" href="https://www.tiktok.com/@anas.devs" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+        <li><a class="social-link" href="https://www.facebook.com/@anasamoo" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+      </ul>
+
+      <p class="footer-copy">&copy; <span id="year"></span> Anas Amoo. All rights reserved.</p>
+      <a href="#main" class="back-to-top">↑ Back to top</a>
     </div>
-  </div>
-</div>
+  </footer>
 
-  <!-- Stats bar -->
-<div class="stats-bar reveal">
-  <div class="stat-item">
-    <span class="stat-number">2+</span>
-    <span class="stat-label">Years Learning</span>
-  </div>
-  <div class="stat-item">
-    <span class="stat-number">7+</span>
-    <span class="stat-label">Projects Built</span>
-  </div>
-  <div class="stat-item">
-    <span class="stat-number">3</span>
-    <span class="stat-label">Tech Stacks</span>
-  </div>
-  <div class="stat-item">
-    <span class="stat-number">Open</span>
-    <span class="stat-label">to Opportunities</span>
-  </div>
-</div>
-
-<div class="about-me" reveal>
-    <h2>About Me</h2>
-
-    <p>I'm Anas Amoo, a Software Engineer and Web Developer passionate about building modern, responsive, and user-friendly applications that solve real-world problems.</p>
-
-    <p>I work with technologies including HTML, CSS, JavaScript, C, Python, and MySQL, and I enjoy turning ideas into practical software. I focus on writing clean, maintainable code that works, not just code that looks good.</p>
-
-    <p>I'm particularly interested in Tech for Good and the role technology can play in addressing challenges in healthcare, education, food security, and public services, especially across Africa and other developing regions. Every project I build is an opportunity to learn, solve a problem, and create something useful.</p>
-
-    <p>I'm continuously developing my engineering skills and looking for opportunities to learn, contribute, collaborate, and grow through meaningful projects, internships, freelance work, and professional opportunities.</p>
-
-    </div>
-
-    <!-- What I do -->
-<div class="section-title" reveal>What I Do</div>
-<p class="section-subtitle">Areas I focus on and can help you with:</p>
-<div class="services-grid">
-  <div class="service-card">
-    <h3>Frontend Development</h3>
-    <p>Building responsive, accessible UIs with clean HTML, CSS, and JavaScript. Pixel-perfect layouts that work on any screen.</p>
-  </div>
-  <div class="service-card">
-    <h3>Backend Development</h3>
-    <p>REST APIs with Node.js/Express and PHP. Secure authentication, role-based access, and database design with MySQL & MongoDB.</p>
-  </div>
-  <div class="service-card">
-    <h3>Full-Stack Projects</h3>
-    <p>End-to-end systems from database schema to live UI. I've built hospital management systems, school portals, and more.</p>
-  </div>
-  <div class="service-card">
-    <h3>Tech for Good</h3>
-    <p>Leveraging tech to solve real community problems. Especially interested in health, education, and social impact platforms in Africa.</p>
-  </div>
-</div>
-
-<!-- Tech stack -->
-<div class="stack-section">
-  <div class="section-title">Tech Stack</div>
-  <p class="section-subtitle">Tools and technologies I work with:</p>
-
-  <div class="stack-category">
-    <div class="stack-category-label">Frontend</div>
-    <div class="badges">
-      <span class="badge">HTML5</span>
-      <span class="badge">CSS3</span>
-      <span class="badge">JavaScript</span>
-      <span class="badge">Responsive Design</span>
-    </div>
-  </div>
-
-  <div class="stack-category">
-    <div class="stack-category-label">Backend</div>
-    <div class="badges">
-      <span class="badge">Python</span>
-      <span class="badge">Express.js</span>
-      <span class="badge">C</span>
-      <span class="badge">REST APIs</span>
-      <span class="badge">JWT Auth</span>
-    </div>
-  </div>
-
-  <div class="stack-category">
-    <div class="stack-category-label">Databases</div>
-    <div class="badges">
-      <span class="badge">MySQL</span>
-      <span class="badge">MySQL2</span>
-    </div>
-  </div>
-
-  <div class="stack-category">
-    <div class="stack-category-label">Tools</div>
-    <div class="badges">
-      <span class="badge">Git</span>
-      <span class="badge">GitHub</span>
-      <span class="badge">VS Code</span>
-      <span class="badge">Ubuntu</span>
-      <span class="badge">Linux</span>
-      <span class="badge">XAMPP</span>
-    </div>
-  </div>
-</div>
-
-
-<!-- Currently -->
-<div class="currently-section">
-  <h3> Currently</h3>
-  <ul class="currently-list">
-    <li>Building MediCore HMS — a full-stack Hospital Management System</li>
-    <li>Deepening my knowledge of React and backend architecture</li>
-    <li>Open to freelance projects, internships, and full-time roles</li>
-    <li>Learning deployment — preparing to go live on Render & Vercel</li>
-    <li>On a mission to become a fullstack developer in the next 400 days</li>
-  </ul>
-</div>
-
-
-<div class="footer">
-  <p>Software Engineer . Web Developer</p> 
-  <p>&copy; 2026 Anas Amoo. All rights reserved.</p>
-  <a href="#" class="back-to-top">↑ Back to top</a>
-</div>
-
-<div class="socials-grid">
-  <a class="social-link" href="https://www.linkedin.com/in/anas-amoo-0173523a8" target="_blank">
-    LinkedIn
-  </a>
-  <a class="social-link" href="https://github.com/buildwithanas" target="_blank">GitHub
-  </a>
-  <a class="social-link" href="https://www.instagram.com/anas_devs" target="_blank">Instagram
-  </a>
-  <a class="social-link" href="https://twitter.com/Amoo_Anas1" target="_blank">Twitter / X
-  </a>
-  <a class="social-link" href="https://www.tiktok.com/@anas.devs" target="_blank">TikTok
-  </a>
-  <a class="social-link" href="https://www.facebook.com/@anasamoo" target="_blank">facebook
-  </a>
-</div>
-
-
-
-<script>
-  // Mobile nav toggle
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
-
-  navToggle.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('open');
-    navToggle.classList.toggle('open', isOpen);
-    navToggle.setAttribute('aria-expanded', isOpen);
-  });
-
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-
-  // Scroll reveal
-  document.addEventListener('DOMContentLoaded', () => {
-    const revealEls = document.querySelectorAll('.reveal');
-    if (!('IntersectionObserver' in window)) {
-      revealEls.forEach(el => el.classList.add('reveal-active'));
-      return;
-    }
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('reveal-active');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    revealEls.forEach(el => observer.observe(el));
-  });
-</script>
+  <script src="script.js" defer></script>
 </body>
 </html>
