@@ -360,6 +360,7 @@ nav ul a:focus-visible::after {
     max-width: 500px;
   }
   .about-me h2 {
+    font-size: 1.3rem;
     margin-left: -80px;
   }
   .about-me p {
@@ -424,7 +425,7 @@ nav ul a:focus-visible::after {
 }
 @media (max-width: 768px) {
   .section-title{
-
+    font-size: 1.3rem;
   }
   .section-subtitle{
     margin-left: 20px;
