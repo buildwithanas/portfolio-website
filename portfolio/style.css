@@ -14,7 +14,7 @@ body {
    ============================================ */
 nav {
   background: #0a0a0a;
-  border-bottom: 1px solid rgb(1, 255, 221);
+  border-bottom: 1px solid #2a2a2a;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -170,7 +170,7 @@ nav ul a:focus-visible::after {
   align-items: flex-start;
   gap: 60px;
   flex-wrap: wrap;
-  margin-bottom: 70px;
+  margin-bottom: 20px;
   max-width: 1200px;
   text-align: justify;
 }
@@ -179,11 +179,10 @@ nav ul a:focus-visible::after {
   width: 450px;
   height: 500px;
   object-fit: cover;
-  border-radius: 1px;
+  border-radius: 10px;
   border: 2px solid #00ffcc;
   box-shadow: 0 15px 35px rgba(0, 255, 204, 0.15);
   flex-shrink: 0;
-  padding-top: 50px;
   margin-left: 100px;
 }
 
@@ -200,7 +199,7 @@ nav ul a:focus-visible::after {
 }
 
 .about p {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   margin-bottom: 18px;
   color: #ffffff;
 }
@@ -217,7 +216,7 @@ nav ul a:focus-visible::after {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 8px;
   font-size: 0.95rem;
   font-weight: 600;
@@ -247,4 +246,86 @@ nav ul a:focus-visible::after {
 .btn-outline:hover {
   background: rgba(0, 255, 204, 0.08);
   transform: translateY(-2px);
+}
+@media (max-width: 900px) {
+  .about img {
+    width: 350px;
+    height: 320px;
+    margin-left: 20px;
+  }
+  .about-content {
+    max-width: 360px;
+  }
+  .about h2 {
+    font-size: 1.05rem;
+    margin-left: 30px;
+  }
+  .about p {
+    margin-left: 30px;
+  }
+  .cta-buttons{
+    margin-left: 30px;
+  }
+  .btn {
+    padding: 4px 2px;
+    font-size: 0.75rem;
+  }
+}
+
+/* ── Stats bar ── */
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+  background: #0a0a0a;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  margin-bottom: 35px;
+  overflow: hidden;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.stat-item {
+  flex: 1;
+  min-width: 100px;
+  padding: 11px 5px;
+  text-align: center;
+  border-right: 1px solid #2a2a2a;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-number {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #00ffcc;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin-top: 2px;
+}
+@media (max-width: 768px) {
+  .stats-bar {
+    margin-left: 5px;
+    max-width: 790px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .stat-item {
+    padding: 3px 2px;
+
+  }
+  .stat-number {
+    font-size: 1rem;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+  }
 }
