@@ -602,3 +602,41 @@ nav ul a:focus-visible::after {
   display: grid;
 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
+
+/* ── Socials ── */
+
+
+.socials-grid {
+  display: flex;
+  gap: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: -6px 1px;
+  text-decoration: none;
+  color: #c0c0c0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  transition: all 0.25s;
+  max-width: 100px;
+}
+.social-link:hover {
+  border-color: #00ffcc;
+  color: #00ffcc;
+  transform: translateY(-2px);
+}
+.social-link .s-icon { font-size: 1.1rem; }
+
+.back-to-top {
+  color: #00ffcc;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
